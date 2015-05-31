@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 醉糊涂
 subtitle:
-description:
-author: John Doe
-language:
+description: 人生难得糊涂
+author: one Lei
+language: zh-CN
 timezone:
 
 # URL
@@ -63,11 +63,31 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
+
+#Extensions
+Plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+
+#Feed Atom
+feed:
+  type: atom 
+  path: atom.xml
+  limit: 10
+
+#sitemap
+sitemap:
+  path: sitemap.xml
+
 theme: jacman
 ## theme: landscape
 
 stylus:
   compress: true
+
+#duoshuo
+duoshuo_shortname: onelei
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
