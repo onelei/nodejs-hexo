@@ -1,37 +1,25 @@
-title: Hello World2
+Hexo 使用
 ---
-Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+Welcome to [Hexo](http://hexo.io/)!
 
-## Quick Start
+## 插件
 
-### Create a new post
 
-``` bash
-$ hexo new "My New Post"
+### 多说
+
+ 
+显示评论: [duoshuo.com](http://duoshuo.com/create-site/)
+
 ```
-
-More info: [Writing](http://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
+1.进入多说官网注册.
+2.复制通用代码保存到博客模板
+3.将通用代码中的：
+请将此处替换成文章在你的站点中的ID 替换为 <%= page.path %>
+请替换成文章的标题 替换为 <%= page.title %>
+请替换成文章的网址 替换为 <%= page.permalink %>
+效果如下:
+<div class="ds-thread" data-thread-key="<%= page.path %>" data-title="<%= page.title %>" data-url="<%= page.permalink %>"></div>
 ```
+![1](/img/1.png)
 
-More info: [Server](http://hexo.io/docs/server.html)
 
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](http://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](http://hexo.io/docs/deployment.html)
