@@ -1,4 +1,6 @@
-Debug node.js addons in Visual Studio 2013
+title: Debug node.js addons in Visual Studio 2013
+date: 2015-08-21 15:38:33
+tags:
 ---
 From to [site](http://computer-vision-talks.com/articles/how-to-debug-nodejs-addons-in-visual-studio/)!
 

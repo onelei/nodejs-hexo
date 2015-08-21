@@ -4,38 +4,41 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>醉糊涂</title>
+    <title>Debug node.js addons in Visual Studio 2013 | 醉糊涂</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="one Lei">
     
 
     
-    <meta name="description" content="Debug node.js addons in Visual Studio 2013From to site!
+    <meta name="description" content="From to site!
 安装1npm install node-gyp -g
 1npm install nan -g
 下载 nodejs code1vcbuild.bat debug nosign x64
-1node-gyp configure rebuild --nodedir=&quot;D:\node-v0.12.">
+1node-gyp configure rebuild --nodedir=&quot;D:\node-v0.12.7&quot; --debug
+After node-gyp finishes, a *.no">
 <meta property="og:type" content="article">
-<meta property="og:title" content="醉糊涂">
+<meta property="og:title" content="Debug node.js addons in Visual Studio 2013">
 <meta property="og:url" content="http://yoursite.com/2015/08/21/Nodejs-addons/index.html">
 <meta property="og:site_name" content="醉糊涂">
-<meta property="og:description" content="Debug node.js addons in Visual Studio 2013From to site!
+<meta property="og:description" content="From to site!
 安装1npm install node-gyp -g
 1npm install nan -g
 下载 nodejs code1vcbuild.bat debug nosign x64
-1node-gyp configure rebuild --nodedir=&quot;D:\node-v0.12.">
+1node-gyp configure rebuild --nodedir=&quot;D:\node-v0.12.7&quot; --debug
+After node-gyp finishes, a *.no">
 <meta property="og:image" content="http://yoursite.com/img/debugnodejsaddons/compile.png">
 <meta property="og:image" content="http://yoursite.com/img/debugnodejsaddons/node-gyp.png">
 <meta property="og:image" content="http://yoursite.com/img/debugnodejsaddons/vs-seting.png">
-<meta property="og:updated_time" content="2015-08-21T07:08:50.084Z">
+<meta property="og:updated_time" content="2015-08-21T07:42:56.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="醉糊涂">
-<meta name="twitter:description" content="Debug node.js addons in Visual Studio 2013From to site!
+<meta name="twitter:title" content="Debug node.js addons in Visual Studio 2013">
+<meta name="twitter:description" content="From to site!
 安装1npm install node-gyp -g
 1npm install nan -g
 下载 nodejs code1vcbuild.bat debug nosign x64
-1node-gyp configure rebuild --nodedir=&quot;D:\node-v0.12.">
+1node-gyp configure rebuild --nodedir=&quot;D:\node-v0.12.7&quot; --debug
+After node-gyp finishes, a *.no">
 
     
     <link rel="alternative" href="/atom.xml" title="醉糊涂" type="application/atom+xml">
@@ -95,14 +98,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/21/Nodejs-addons/" title="" itemprop="url"></a>
+      <a href="/2015/08/21/Nodejs-addons/" title="Debug node.js addons in Visual Studio 2013" itemprop="url">Debug node.js addons in Visual Studio 2013</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="one Lei" target="_blank" itemprop="author">one Lei</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-21T07:08:50.084Z" itemprop="datePublished"> 发表于 2015-08-21</time>
+    <time datetime="2015-08-21T07:38:33.000Z" itemprop="datePublished"> 发表于 2015-08-21</time>
     
   </p>
 </header>
@@ -111,11 +114,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Debug_node-js_addons_in_Visual_Studio_2013"><span class="toc-number">1.</span> <span class="toc-text">Debug node.js addons in Visual Studio 2013</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li></ol>
 		
 		</div>
 		
-		<h2 id="Debug_node-js_addons_in_Visual_Studio_2013">Debug node.js addons in Visual Studio 2013</h2><p>From to <a href="http://computer-vision-talks.com/articles/how-to-debug-nodejs-addons-in-visual-studio/" target="_blank" rel="external">site</a>!</p>
+		<p>From to <a href="http://computer-vision-talks.com/articles/how-to-debug-nodejs-addons-in-visual-studio/" target="_blank" rel="external">site</a>!</p>
 <h2 id="安装">安装</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> node-gyp -g</span><br></pre></td></tr></table></figure>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> nan -g</span><br></pre></td></tr></table></figure>
 <p>下载 <a href="https://nodejs.org/dist/v0.12.7/node-v0.12.7.tar.gz/" target="_blank" rel="external">nodejs code</a><br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vcbuild<span class="class">.bat</span> debug nosign x64</span><br></pre></td></tr></table></figure></p>
@@ -133,7 +136,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2015/08/21/Nodejs-addons/" data-title="醉糊涂" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2015/08/21/Nodejs-addons/" data-title="Debug node.js addons in Visual Studio 2013 | 醉糊涂" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -146,21 +149,21 @@
 	
 <nav class="article-nav clearfix">
  
-
-<div class="next">
-<a href="/2015/08/21/hello-world/"  title="">
- <strong>下一篇：</strong><br/> 
- <span>(no title)
-</span>
+ <div class="prev" >
+ <a href="/2015/08/21/Hexo/" title="Hexo 使用">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Hexo 使用</span>
 </a>
 </div>
+
 
 </nav>
 
 	  
 <section id="comment">  
   <!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2015/08/21/Nodejs-addons/" data-title="" data-url="http://yoursite.com/2015/08/21/Nodejs-addons/"></div>
+	<div class="ds-thread" data-thread-key="2015/08/21/Nodejs-addons/" data-title="Debug node.js addons in Visual Studio 2013" data-url="http://yoursite.com/2015/08/21/Nodejs-addons/"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
@@ -184,7 +187,7 @@ var duoshuoQuery = {short_name:"onelei"};
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Debug_node-js_addons_in_Visual_Studio_2013"><span class="toc-number">1.</span> <span class="toc-text">Debug node.js addons in Visual Studio 2013</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li></ol>
  
   </div>
 

@@ -1,13 +1,21 @@
-Hexo 使用
+title: Hexo 使用
+date: 2015-08-21 15:41:08
+tags:
 ---
 Welcome to [Hexo](http://hexo.io/)!
 
-## 插件
+## 使用
+```
+hexo -n test
+```
+```
+hexo generate
+```
+```
+hexo server
+```
 
-
-### 多说
-
- 
+## 插件-- 多说
 显示评论: [duoshuo.com](http://duoshuo.com/create-site/)
 
 ```
