@@ -79,7 +79,7 @@ feed:
 sitemap:
   path: sitemap.xml
 
-theme: jacman
+theme: huno
 ## theme: landscape
 
 stylus:
