@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Unity3D地形系统自定义画笔 | 醉糊涂 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="one Lei">
+    
+    
+      <meta name="description" content="1.在Unity的Assets目录下面创建一个Gizmos目录(Assets\Gizmos..)
+2.创建一个带透明的图形(推荐PNG格式)，分辨率必须是2的幂次方宽高相等(如256*256)。需要突出显示的地方用黑色，反之保持透明。(test.png)
+3.将test.png命名为 brush_0.png 下标必须从0开始。不能中断.
+4.重启动unity3d,编辑地形和绘制贴图就可以看到新增加">
+    
+
+    <meta name="description" content="1.在Unity的Assets目录下面创建一个Gizmos目录(Assets\Gizmos..)
+2.创建一个带透明的图形(推荐PNG格式)，分辨率必须是2的幂次方宽高相等(如256*256)。需要突出显示的地方用黑色，反之保持透明。(test.png)
+3.将test.png命名为 brush_0.png 下标必须从0开始。不能中断.
+4.重启动unity3d,编辑地形和绘制贴图就可以看到新增加">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity3D地形系统自定义画笔 | 醉糊涂">
+<meta property="og:url" content="http://yoursite.com/2015/09/16/brush/index.html">
+<meta property="og:site_name" content="醉糊涂">
+<meta property="og:description" content="1.在Unity的Assets目录下面创建一个Gizmos目录(Assets\Gizmos..)
+2.创建一个带透明的图形(推荐PNG格式)，分辨率必须是2的幂次方宽高相等(如256*256)。需要突出显示的地方用黑色，反之保持透明。(test.png)
+3.将test.png命名为 brush_0.png 下标必须从0开始。不能中断.
+4.重启动unity3d,编辑地形和绘制贴图就可以看到新增加">
+<meta property="og:image" content="http://yoursite.com/img/brush/test.png">
+<meta property="og:updated_time" content="2015-09-18T08:14:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unity3D地形系统自定义画笔 | 醉糊涂">
+<meta name="twitter:description" content="1.在Unity的Assets目录下面创建一个Gizmos目录(Assets\Gizmos..)
+2.创建一个带透明的图形(推荐PNG格式)，分辨率必须是2的幂次方宽高相等(如256*256)。需要突出显示的地方用黑色，反之保持透明。(test.png)
+3.将test.png命名为 brush_0.png 下标必须从0开始。不能中断.
+4.重启动unity3d,编辑地形和绘制贴图就可以看到新增加">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css" type="text/css">
+
+    <script src="/js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">醉糊涂</a></h1>
+
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">
+          人生难得糊涂
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">Blog</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">About</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archives#/blogroll" title="" class="">Blogroll</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+------------------------------ -->
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+
+  <!-- Github -->
+  <li class="navigation__item">
+    <a href="https://github.com/onelei" title="onelei on GitHub">
+      <i class='icon icon-social-github'></i>
+      <span class="label">GitHub</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+    
+      
+      <div class="post-meta">
+        <time datetime="2015-09-16" class="post-meta__date date">2015-09-16</time> &#8226; 
+
+        <span class="post-meta__tags tags">
+
+            <font class="categories">
+              
+            </font>
+            
+
+        </span>
+      </div>
+      
+
+      <h1 class="post-title">Unity3D地形系统自定义画笔</h1>
+    </header>
+
+    <section class="post">
+      <p>1.在Unity的Assets目录下面创建一个Gizmos目录(Assets\Gizmos..)</p>
+<p>2.创建一个带透明的图形(推荐PNG格式)，分辨率必须是2的幂次方宽高相等(如256*256)。需要突出显示的地方用黑色，反之保持透明。(test.png)</p>
+<p>3.将test.png命名为 brush_0.png 下标必须从0开始。不能中断.</p>
+<p>4.重启动unity3d,编辑地形和绘制贴图就可以看到新增加的笔刷了。</p>
+<p><img src="/img/brush/test.png" alt="">    </p>
+
+    </section>
+
+    
+<section id="comment">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2015/09/16/brush/
+    " data-title="Unity3D地形系统自定义画笔"
+         data-url="http://yoursite.com/2015/09/16/brush/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"onelei"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ?
+                            'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+
+</section>
+  
+  </article>
+
+
+
+
+            <footer class="footer">
+    <span class="footer__copyright">&copy; 2014. All rights reserved.</span>
+    <span class="footer__copyright">
+        Email: <a href="leiwolong@qq.com" title="this is a email">leiwolong@qq.com</a>
+        | Github  <a href="http://github.com/onelei" title="">onelei</a></span>
+</footer>
+        </div>
+    </div>
+
+    <!-- The main JavaScript file for Casper -->
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    <script src="/js/jquery.imagesloaded.min.js"></script>
+    <script src="/js/gallery.js"></script>
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config"> 
+      MathJax.Hub.Config({ 
+        tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+    }); 
+    </script>
+
+    <!--kill ie6 -->
+    <!--[if IE 6]>
+      <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+    <![endif]-->
+
+    <!--  google analytics -->
+    <script>
+      // add your google analytics code here
+    </script>
+
+    <!-- totop -->
+    <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+    <a title="back to top"><img style="width:30px;height:30px;" src="/images/totop.png"/></a>
+    </div>
+    <script>
+    (function($) { 
+      var upperLimit = 100;
+      var scrollElem = $('#totop');
+      var scrollSpeed = 500; 
+      scrollElem.hide();
+      $(window).scroll(function () {            
+        var scrollTop = $(document).scrollTop();       
+        if ( scrollTop > upperLimit ) {
+          $(scrollElem).stop().fadeTo(300, 1); // fade back in           
+        }else{       
+          $(scrollElem).stop().fadeTo(300, 0); // fade out
+        }
+      });
+      $(scrollElem).click(function(){
+        $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+      });
+    })(jQuery);
+    </script>
+
+    <!-- fancybox -->
+    
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+      (function($){
+        $('.fancybox').fancybox();
+      })(jQuery);
+    </script>
+    
+
+</body>
+</html>
