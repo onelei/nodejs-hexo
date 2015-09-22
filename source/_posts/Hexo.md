@@ -6,16 +6,12 @@ Welcome to [Hexo](http://hexo.io/)!
 
 ## 使用
 ```
-hexo -n test
-```
-```
-hexo generate
-```
-```
-hexo server
+hexo n test   
+hexo g   
+hexo s   
 ```
 
-## 插件-- 多说
+## 插件--> 多说
 显示评论: [duoshuo.com](http://duoshuo.com/create-site/)
 
 ```
@@ -28,6 +24,10 @@ hexo server
 效果如下:
 <div class="ds-thread" data-thread-key="<%= page.path %>" data-title="<%= page.title %>" data-url="<%= page.permalink %>"></div>
 ```
-![1](/img/1.png)
 
-
+## 安装  
+修改
+```
+themes\yourthemes\layout\_partial\comment.ejs  
+```
+![](/img/hexo/duoshuo.png)  
