@@ -1,0 +1,14 @@
+# Header
+menu:
+  Blog: /#blog
+  About: /about
+  Blogroll: /archives#/blogroll
+
+# Site favicon
+favicon: /favicon.png
+
+# Site logo
+# logo: /avatar.png
+
+# Enable Fancybox
+fancybox: true
