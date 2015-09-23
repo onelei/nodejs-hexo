@@ -4,6 +4,9 @@ tags:
 ---
 Welcome to [Hexo](http://hexo.io/)!
 
+## 版本
+![](/img/hexo/version.png)
+
 ## 使用
 ```
 hexo n test   

@@ -1,6 +1,6 @@
 title: couchbase 备份与还原
 date: 2015-09-21 15:55:31
-tags:
+tags: couchbase
 ---
 ## 说明
 username=> 注册的用户名(例如onelei)
