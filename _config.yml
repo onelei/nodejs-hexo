@@ -80,7 +80,7 @@ sitemap:
   path: sitemap.xml
 
 theme: huno
-## theme: landscape
+#theme: landscape
 
 stylus:
   compress: true
